@@ -3,15 +3,14 @@
   padding: 0;
 }
 
-html{
-  height: 100%;
-}
-
 body{
+  height: 100%;
   background: linear-gradient(180deg, #010028 0%, #001E6C 44.27%, #3127A0 89.58%);
 
+  background-repeat: no-repeat;
+
   color: white;
-  padding: 60px 5% 0px 5%;
+  padding: 60px 5%;
 }
 
 header{
@@ -105,3 +104,55 @@ header span{
 }
 
 /*PROJECTS SECTION*/
+.projects{
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+@keyframes easeIn{
+  0% {top: 30px;}
+  100% {top: 0px;}
+}
+
+.projects .card{
+  position: relative;
+  width: 15%;
+  height: 150px;
+  margin-top: 50px;
+
+  border-radius: 4px;
+  background-color: #010028;
+  opacity: 0.5;
+
+
+  /*Animation*/
+  animation-name: easeIn;
+  animation-timing-function: ease-in;
+}
+
+.projects a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.projects .card:hover{
+  opacity: 1;
+  cursor: pointer;
+  
+  transition: 1s
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card a{
+  text-decoration: none;
+}
+
+

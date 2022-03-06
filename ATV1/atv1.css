@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  margin: 5% 15%;
+}
+
+body p,ul{
+  line-height: 2.5;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+/*Chamando os parágrafos pelo ID para alteração da cor*/
+#idade{
+  margin-bottom: 20px;
+  color: green;
+}
+
+#conquista{
+  margin-top: 20px;
+
+  color: red;
+}
