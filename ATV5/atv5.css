@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #2e302f;
+}
+
+header, footer{
+  display: flex;
+  background-color: #2e302f;
+  height: 60px;
+
+  background-color: #181818;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes moveSides{
+  0% {background-color: white; left: 0px; right: 0px;}
+  50% {background-color: white; right: 0%; left: 80%;}
+  100% {background-color: white; left: 0px; right: 0px;}
+}
+
+@keyframes moveTop{
+  0% {background-color: white; top: 8%; }
+  50% {background-color: white; top: 70%; }
+  100% {background-color: white; top: 8%;}
+}
+
+main{
+  display: flex;
+}
+
+.part1{
+  width: 70%
+}
+
+.part2{
+  width: 60vh;
+  height: 4vh;
+  margin-top: 300px;
+}
+
+#quadrado1, #quadrado2, #quadrado3{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: 2%;
+
+  border-radius: 6px;
+  box-shadow: 5px 9px #ffffff ;
+}
+
+#quadrado1{
+  background: linear-gradient(90deg, rgb(69, 101, 245), #29dfff);
+
+  animation-name: moveSides;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#quadrado2{
+  top: 400px;
+  margin-left: 5%;
+
+  background: linear-gradient(45deg, rgb(68, 151, 72), #ff297b);
+ 
+}
+
+#quadrado2:active{
+  cursor: pointer;
+  background: linear-gradient(195deg, #630a6b, #5729ff);
+
+  border-radius: 180px;
+}
+
+#quadrado3{
+  background: linear-gradient(180deg, rgb(252, 61, 61), #fff129);
+
+  animation-name: moveTop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+footer{
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

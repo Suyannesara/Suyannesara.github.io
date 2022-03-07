@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+
+  margin: 0% 10%;
+  flex-direction: column;
+
+}
+
+.text{
+  margin: 15px;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.text p{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+img{
+  width: 450px;
+  margin: 10px 100px;
+
+  align-self: center;
+}
+
+.text #mark2{
+  background-color: rgb(11, 199, 11);
+}
+
+.text #mark3{
+  background-color: red;
+}
+
+.text #mark4{
+  background-color: blue;
+}
+
+.text #mark5{
+  background-color: purple;
+}
