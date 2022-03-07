@@ -36,15 +36,20 @@ header span{
   padding-top: 20px;
 
   max-width: 100px;
-  justify-content: space-between;
   align-items: center;
 }
 
-.socialMediaLittle{
+.socialMedia a{
   width: 30px;
   height: 30px;
+}
 
-  background-color: white;
+.socialMedia a img{
+  width: 30px;
+}
+
+.socialMedia #github{
+  padding-left: 15px;
 }
 
 .container{
