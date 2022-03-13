@@ -8,7 +8,7 @@ function calcMedia(){
   var nota3 = parseFloat(document.getElementById('nota3').value)
 
   //Calculating avarage
-  var media = (nota1 + nota2 + nota3) / 3
+  var media = ((nota1*2) + (nota2*3) + (nota3*5)) / 3
   
 
   //Replacing content
