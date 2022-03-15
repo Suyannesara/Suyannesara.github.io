@@ -8,7 +8,7 @@ function calcMedia(){
   var nota3 = parseFloat(document.getElementById('nota3').value)
 
   //Calculating avarage
-  var media = ((nota1*2) + (nota2*3) + (nota3*5)) / 3
+  var media = ((nota1*2) + (nota2*3) + (nota3*5)) / 10
   
 
   //Replacing content
@@ -99,7 +99,7 @@ function checarGanho(){
 // ATV5
 function calcImposto(){
   let salarioL = parseFloat(document.getElementById('salario_lisarb').value)
-  let percentual;
+  let percentualL;
 
   if (salarioL >=0 && salarioL <= 2000){
     document.getElementById('resultL').innerHTML = "Isento"
