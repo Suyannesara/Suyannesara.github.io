@@ -57,3 +57,14 @@ function incluirAluno(){
   alunos.push(novoAluno)
   lacoFor()
 }
+
+function incluirAluno(){
+  let novoAluno = ("Digite o novo aluno: ")
+
+  if (novoAluno = " "){
+    alert("Você não pode inserir um aluno sem nome")
+  }else{
+    alunos.push(novoAluno)
+    lacoFor()
+  }
+}
