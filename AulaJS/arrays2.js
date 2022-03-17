@@ -19,7 +19,41 @@ function lacoForEach(){
 }
 
 //lacoForEach();
+function lacoFor(){
+  for (i = 0; i < alunos.length; i++){
+    texto += `<li> ${alunos[i].toLowerCase()} </li>`
+  }
+  document.getElementById("demo").innerHTML = texto;
+}
 
-for (i = 0; i < alunos.length; i++){
 
+//For decrescente
+function lacoForDesc(){
+  for (i = alunos.length; i != 0 < ; i++){
+    texto += `<li> ${alunos[i].toLowerCase()} </li>`
+  }
+  document.getElementById("demo").innerHTML = texto;
+}
+
+
+//Só funciona com array ou objetos
+function lacoForIn(){
+  for (i in alunos){
+  texto += `<li> ${alunos[i]} </li>`
+  }
+}
+
+
+function limpar(){
+  document.getElementById("demo").innerHTML = "";
+}
+
+function removerUltimoAluno(){
+  alunos.pop()
+  lacoFor()
+}
+function incluirAluno(){
+  let novoAluno = ("Digite o novo aluno: ")
+  alunos.push(novoAluno)
+  lacoFor()
 }
