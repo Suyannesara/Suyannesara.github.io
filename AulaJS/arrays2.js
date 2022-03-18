@@ -52,6 +52,7 @@ function removerUltimoAluno(){
   alunos.pop()
   lacoFor()
 }
+
 function incluirAluno(){
   let novoAluno = ("Digite o novo aluno: ")
   alunos.push(novoAluno)

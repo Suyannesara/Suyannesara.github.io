@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button onclick="sortear()">Sorteio</button>
+  <div id="saida"></div>
+
+  <script>
+    let alunos = ["LUIZ FELIPE", "SUYANNE MIRANDA", "DA GUIA", "JOSINEI", "CLAUDITE", "GURGEL", "AMANDA"];
+    let i = 1;
+
+    function sortear(){
+      if(alunos.length == 0){
+        return;
+      }
+
+      let saida = Math.random() * alunos.length
+      let sorteado = Math.trunc(saida)
+      //let p = document.createElement("p") 
+      //p.innerHTML = `${i++} - ${alunos[sorteado]}<br>`
+      //document.getElementById("saida").append(p);
+
+      //alunos.splice(sorteado, 1);
+
+      let novosAlunos = []
+      //novoAluno = novoAluno + alunos[sorteado]
+      
+      for(i = 0; i <= alunos; i++){
+        if(sorteado == novosAlunos[i]){
+          document.getElementById("saida").innerHTML = `<p> alunos[sorteado]</p>`
+        }else{
+          alert("Esse aluno ainda não foi sorteado")
+          novosAlunos = novosAlunos + sorteado
+        }
+
+      }
+     
+
+    }
+
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
