@@ -112,6 +112,7 @@ header span{
 .projects{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   font-family: "Roboto", sans-serif;
   font-weight: 700;
