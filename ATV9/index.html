@@ -92,20 +92,20 @@
                     Lista armazenada
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado: A lista de itens é [xxxx,xxxx,xxxx,xxxxx]</p>
+            <p id="">Resultado: A lista de itens é <span id="resultLista">[xxxx,xxxx,xxxx,xxxxx]</span> </p>
             <label for="">Item:</label>
-            <input type="text" id="" />
-            <input type="button" value="Add" />
-            <input type="button" value="Show" />
-            <input type="button" value="Clear" />
+            <input type="text" id="nomeItem" />
+            <input onclick="addItem()" type="button" value="Add" />
+            <input onclick="mostrarLista()" type="button" value="Show" />
+            <input onclick="limparLista()" type="button" value="Clear" />
         </div>
         <div class="questao">
             <h1>
-                Questã 04:<span>Mega SENA
+                Questão 04:<span>Mega SENA
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado:00,00,00,00,00,00</p>
-            <input type="button" value="Sortear!" />
+            <p id="resultSorteio">Resultado:00,00,00,00,00,00</p>
+            <input onclick="sortear()" type="button" value="Sortear!" />
         </div>
         <div class="questao">
             <h1>
@@ -147,6 +147,9 @@
 
     <script src="q1.js"></script>
     <script src="q2.js"></script>
-</body>
+    <script src="q3.js"></script>
+    <script src="q4.js"></script>
+    <script src="q5.js"></script>
+  </body>
 
 </html>
