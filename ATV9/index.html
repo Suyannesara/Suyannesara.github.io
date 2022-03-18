@@ -114,19 +114,19 @@
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">
-                Resultado: <br />Lista de homens [xxxx,xxxx,xxxx,xxxxx] <br />Lista de
-                mulheres [xxxx,xxxx,xxxx,xxxxx]
+                Resultado: <br /><span id="resultHomens"> Lista de homens [xxxx,xxxx,xxxx,xxxxx]</span> <br /><span id="resultMulheres">Lista de
+                mulheres [xxxx,xxxx,xxxx,xxxxx]</span> 
             </p>
             <label for="">Nome:</label>
-            <input type="text" id="" />
+            <input type="text" id="nome" />
             <label for="">Sexo:</label>
-            <select name="sexo" id="">
-                <option value="M">Masculino</option>
-                <option value="F">Feminino</option>
+            <select name="sexo" id="sexo">
+                <option class="sexo" value="M">Masculino</option>
+                <option class="sexo" value="F">Feminino</option>
             </select>
-            <input type="button" value="Add" />
-            <input type="button" value="Show" />
-            <input type="button" value="Clear" />
+            <input onclick="addPessoa()" type="button" value="Add" />
+            <input onclick="mostrarListaPessoas()" type="button" value="Show" />
+            <input onclick="limparListaPessoa()" type="button" value="Clear" />
         </div>
         <div class="questao">
             <h1>
