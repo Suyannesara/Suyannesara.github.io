@@ -30,56 +30,60 @@
   </header>
 
   <div class="container">
-    <div class="text">
+    <div id="entranceText" class="text">
       <h2>Welcome to my galaxy! </h2>
 
-      <a id="openButton" href=""><button>Find out my projects</button></a>
+      <a onclick="showProjects()" id="openButton" ><button>Find out my projects</button></a>
      
     </div>
   </div>
 
-  <div class="w3-animate-bottom projects">
-    <a href="ATV1/atv1.html" target="_blank" class="card">
-    ATV 1
-    </a>
-
-    <a href="ATV2/atv2.html" target="_blank" class="card">
-    ATV 2
-    </a>
-
-    <a href="https://suyannesara.github.io/CurricuLin/" target="_blank" class="card">
-    ATV 3
-    </a>
-        
-    <a href="ATV4/atv4.html" target="_blank" class="card">
-    ATV 4
-    </a>
-
-    <a href="ATV5/atv5.html" target="_blank" class="card">
-    ATV 5
-    </a>
-
-    <a href="ATV8/atv8.html" target="_blank" class="card">
-      ATV 8
-    </a>
-
-    <a href="ATV9/atv9.html" target="_blank" class="card">
-      ATV 9
-    </a>
-
-    <a href="justiceLeague/index.html" target="_blank" class="card">
-      JUSTICE LEAGUE CARDS
-    </a>
+  <div id="projectsContainer" class="projects">
 
   </div>
 
   <script>
-    var button = document.getElementById('openButton').addEventListener('click', moveUp)
+    function showProjects(){
+      //Take text of
+      document.getElementById("entranceText").innerHTML =
+      `<h2 class="textAnimation">Welcome to my galaxy! </h2>`
 
-    function moveUp(){
-      
 
-    }
+      document.getElementById("projectsContainer").innerHTML = `
+      <a href="ATV1/atv1.html" target="_blank" class="card animation-target">
+      ATV 1
+      </a>
+
+      <a href="ATV2/atv2.html" target="_blank" class="card animation-target">
+      ATV 2
+      </a>
+
+      <a href="https://suyannesara.github.io/CurricuLin/" target="_blank" class=" card animation-target">
+      ATV 3
+      </a>
+          
+      <a href="ATV4/atv4.html" target="_blank" class="card animation-target">
+      ATV 4
+      </a>
+
+      <a href="ATV5/atv5.html" target="_blank" class="card animation-target">
+      ATV 5
+      </a>
+
+      <a href="ATV8/atv8.html" target="_blank" class="card animation-target">
+        ATV 8
+      </a>
+
+      <a href="ATV9/atv9.html" target="_blank" class="card animation-target">
+        ATV 9
+      </a>
+
+      <a href="justiceLeague/index.html" target="_blank" class="card animation-target">
+        JUSTICE LEAGUE CARDS
+      </a>`
+  
+    }  
+
   </script>
 
 
