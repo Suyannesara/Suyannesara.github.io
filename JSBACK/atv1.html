@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MÉIDA</title>
+</head>
+<body>
+  <div id="container">
+    <p>Digite a 1º nota</p>
+    <input type="text" id="nota1">  
+  
+    <p>Digite a 2º nota</p>
+    <input type="text" id="nota2">  
+  
+    <p>Digite a 3º nota</p>
+    <input type="text" id="nota3"> 
+    <br> <br> 
+  
+    <button onclick="calcularMedia()">Calcular média</button>
+  </div>
+
+  <script>
+    function calcularMedia(){
+      let nota1 = Number(document.getElementById("nota1").value);
+      let nota2 = Number(document.getElementById("nota2").value);
+      let nota3 = Number(document.getElementById("nota3").value); 
+      
+      let media = (nota1 + nota2 + nota3) / 3
+
+      if (media >= 6){
+        document.getElementById("container").innerHTML = `Sua média foi de: ${media}. <br> Você está aprovado!`
+      }else{
+        document.getElementById("container").innerHTML = `Sua média foi de: ${media}. <br> Você foi reprovado`
+      }
+      
+    }
+    
+    
+    
+
+
+  </script>
+  
+</body>
+</html>
