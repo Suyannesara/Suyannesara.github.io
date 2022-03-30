@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATV10</title>
+</head>
+<body>
+  <h2>Fibonacci Fácil</h2>
+  <label for="">
+    Digite um número inteiro de 1 a 46: 
+    <input id="numero" type="text"> <br>
+  </label>
+
+  <button onclick="mostrarFibonacci()">Mostrar sequência fibonacci</button>
+
+  <p id="resultado"></p>
+  <table id="tabela">
+
+  </table>
+
+  <script>
+    function mostrarFibonacci() {
+      let numero = Number(document.getElementById("numero").value);
+
+      let sequenciaFibonacci = [0,1]
+  
+      //Validação
+      if (numero > 46 || numero < 1){
+        alert("Você precisa inserir um número entre 1 e 46!")
+      } else if (numero == ""){
+        alert("Você precisa informar um número para mostrarmos a sequeência!")
+      } else{
+
+        //Calculo da sequência
+        for (i = 2; i < numero; i++){
+        sequenciaFibonacci[i] = sequenciaFibonacci[i - 1] + sequenciaFibonacci[i - 2]
+        }
+
+        //Mostrar sequência na tela
+        document.getElementById("resultado").innerHTML = `A sequência fibonacci do número ${numero} é: <strong>${sequenciaFibonacci}! </strong>`
+
+        //Mostrar em tabela
+        var j = 1
+        while (j <= numero){
+          document.getElementById("tabela").innerHTML = `<br>
+          <tr><td>${sequenciaFibonacci[j]}</td></tr>`
+        }
+
+      }
+
+    }
+    
+  </script>
+
+
+
+</body>
+</html>
