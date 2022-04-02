@@ -10,11 +10,12 @@
   <script src="validar-gerar-cpf.js"></script>
 </head>
 <body>
-
+  
   <div class="container">
+    
     <form class="form-horizontal" action="">
       <div class="form-group">
-
+        <h2>Painel Centro Cirurgico</h2>
         <!-- LINHA 1 -->
         <div class="row">
           <div class="col-sm-6">
@@ -39,7 +40,7 @@
 
             <input type="nome" class="form-control" id="nome" placeholder="Enter nome" name="nome">
           </div>
-        </div>
+        </div> <br>
 
         <!-- LINHA 2 -->
         <div class="row">
@@ -75,10 +76,30 @@
         <button class="btn btn-primary">Gravar</button>
         <button class="btn btn-danger">Apagar</button>
       </div>
-      
+    </form> <br>
 
-    </form>
-  </div>
-      
+    <!-- TABELA -->
+    <table class="table table-striped">
+      <tbody id="tbCorpo">
+        <thead>
+          <tr>
+            <th>Nome Paciente</th>
+            <th>Status</th>
+            <th>Hora Início</th>
+            <th>Início Previsto</th>
+            <th>Fim Previsto</th>
+            <th>Saída Prevista</th>
+          </tr>
+        </thead>
+
+      </tbody>
+    </table>
+
 </body>
 </html>
+
+<script>
+  
+
+
+</script>
