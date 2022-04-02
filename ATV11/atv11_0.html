@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Cirúrgico</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="validar-gerar-cpf.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <form class="form-horizontal" action="">
+      <div class="form-group">
+
+        <!-- LINHA 1 -->
+        <div class="row">
+          <div class="col-sm-6">
+            <label class="control-label" for="">Nome do paciente:</label> <br>
+
+            <input type="nome" class="form-control" id="nome" placeholder="Enter nome" name="nome">
+          </div>
+
+          <div class="col-sm-3">
+            <label class="control-label" for="">Status:</label> <br>
+
+            <select class="form-control">
+              <option value="">Pré Operatório</option>
+              <option value="">Em sala de Cirurgia</option>
+              <option value="">Sala de Recuperação</option>
+              <option value="">Transferido</option>
+            </select>
+          </div>
+
+          <div class="col-sm-3">
+            <label class="control-label" for="">Local:</label> <br>
+
+            <input type="nome" class="form-control" id="nome" placeholder="Enter nome" name="nome">
+          </div>
+        </div>
+
+        <!-- LINHA 2 -->
+        <div class="row">
+          <div class="col-sm-3">
+            <label class="control-label" for="">Hora início:</label> <br>
+
+            <input type="time" class="form-control">
+          </div>
+
+          <div class="col-sm-3">
+            <label class="control-label" for="">Início Previsto:</label> <br>
+
+            <input type="time" class="form-control">
+          </div>
+
+          <div class="col-sm-3">
+            <label class="control-label" for="">Fim previsto:</label> <br>
+
+            <input type="time" class="form-control">
+          </div>
+
+          <div class="col-sm-3">
+            <label class="control-label" for="">Saída prevista:</label> <br>
+
+            <input type="time" class="form-control">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-default">Novo</button>
+        <button class="btn btn-primary">Gravar</button>
+        <button class="btn btn-danger">Apagar</button>
+      </div>
+      
+
+    </form>
+  </div>
+      
+</body>
+</html>
