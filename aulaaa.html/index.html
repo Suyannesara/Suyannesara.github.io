@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-group">
+
+      <label for="cep">CEP</label>
+      <input onblur="carregarEndereco()" type="text" name="cep" id="endereco">
+      <button type="button"></button>
+
+    </div>
+
+    <div>
+      <label for="">Endereco</label>
+      <input type="text" id="endereco">
+    </div>
+  </div>
+
+  <script>
+    let end = {
+      "cep": "01001-000",
+      "logradouro": "Praça da Sé",
+      "complemento": "lado ímpar",
+      "bairro": "Sé",
+      "localidade": "São Paulo",
+      "uf": "SP",
+      "ibge": "3550308",
+      "gia": "1004",
+      "ddd": "11",
+      "siafi": "7107"
+    };
+
+    function carregarEndereco(params){
+      document.getElementById('endereco').value = `${end.localidade}-${end.uf}, ${end.bairro}, ${end.logradouro}`
+
+    }
+
+
+
+  </script>
+  
+</body>
+</html>
