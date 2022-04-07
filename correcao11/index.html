@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Painel cirúrgico</h2>
+
+    <div class="row">
+      <input type="hidden" id="id">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input class="form-control" id="nome" name="nome" type="text">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <button class="btn btn-basic" onclick="novo()">Novo</button>
+        <button class="btn btn-primary" onclick="gravar()">Gravar</button>
+        <button class="btn btn-danger" onclick="apagar()">Apagar</button>
+      </div>
+    </div>
+    <br>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome do Paciente</th>
+        </tr>
+      </thead>
+  
+      <!-- ONDE AS LINHAS SERÃO ARUALIZADAS -->
+      <tbody id="tbCorpo">
+  
+      </tbody>
+      
+    </table>
+  </div>
+
+
+  <script>
+    //Criando o array que será preenchido com os objetos
+    let listaPaciente = [];
+
+    //verificar se existe algo gravado no localstorage
+    if (localStorage.getItem('listaPaciente') != null) {
+      //atualização do local storage
+      listaPaciente = JSON.parse(localStorage.getItem('listaPaciente'));
+    }
+
+    //localStorage.setItem() - grava itens no local storage
+
+    //Preencher um objeto json com as infos digitadas
+    function gravar() {
+
+      //criação do objeto
+      let paciente = {};
+      paciente.nome = document.getElementById('nome').value;
+
+      let i = document.getElementById('id').value
+      if (i == '') {
+        listaPaciente.push(paciente);
+      }else{
+        listaPaciente[i] = paciente;
+      }
+
+      //incluindo o novo paciente na lista de pessoas
+      listaPaciente.push(paciente)
+
+      localStorage.setItem('listaPaciente', JSON.stringify(listaPaciente));
+
+      carregarTabela()
+    }
+
+    function carregarTabela() {
+      //preencher tabela com dados da pessoa
+      let tabela = '';
+
+      //vai percorrer cada item da lista paciente
+      for (i in listaPaciente){
+        tabela +=  `<tr onclick="${}"><td>${listaPaciente[i].nome}</td></tr>`
+
+      }
+
+      //inserir a nova tabela na pag
+      document.getElementById('tbCorpo').innerHTML = tabela;
+    }
+
+    carregarTabela()
+
+    //editar tabela
+
+    function editar(i){
+      document.getElementById('nome').value = listaPaciente[i].nome
+
+      document.getElementById('id').value = i
+    }
+
+    function novo(i){
+      document.getElementById('id').value = ''
+      document.getElementById('nome').value = ''
+    }
+
+    function apagar(i){
+      let i = document.getElementById('id').value;
+
+      //splice apaga os coisas do array
+      listaPaciente.splice(i, 1)
+      localStorage.setItem('listaPaciente', JSON.stringify(listaPaciente));
+      carregarTabela()
+      novo();
+    
+    }
+
+
+
+  </script>
+
+
+</body>
+</html>
