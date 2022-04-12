@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LINK W3 SCHOOLS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css
+  ">
+  <title>Janela Modal</title>
+</head>
+
+<body>
+  <button class="w3-button">Exemplo Modal</button>
+  <div id="modal-01" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <span class="w3-button w3-display-topright"
+        onclick="document.getElementById('modal-01').style.display= 'none'">X</span>
+      <header class="w3-container w3-teal">
+        <h2>SENAI</h2>
+      </header>
+      <div class="w3-container" id="corpo-modal">
+        <p>Turma de Front do SENAI BB</p>
+        <p id="ls-regiao"></p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>...</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("modal-01").style.display = 'block'
+
+    let ajax = new XMLHttpRequest();
+
+    //forma de comunicação | endereço
+    ajax.open('GET', 'https://servicodados.ibge.gov.br/api/v1/localidades/regioes');
+    //acesse  o local
+    ajax.send();
+
+    //quando acessar(onload) faça ...
+    ajax.onload = function () {
+      //Coloque os dados dentro da variável em forma de texto
+      let lsRegiao = JSON.parse(this.response);
+
+      for (const i in lsRegiao) {
+        //Criando o elemento P
+        let p = document.createElement('p');
+        //Inserindo texto no elemento criado
+        p.innerText = lsRegiao[i].nome;
+        document.getElementById('corpo-modal') =
+
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
